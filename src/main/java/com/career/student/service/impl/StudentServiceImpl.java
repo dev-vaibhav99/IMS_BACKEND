@@ -53,23 +53,6 @@ public class StudentServiceImpl implements StudentService {
 		return updated;
 	}
 
-//	@Override
-//	public ResponseEntity<Book> patch(UUID id, Map<Object, Object> fields) {
-//	Optional<Book> book studentRepo.findById(id);
-//	if (book.isPresent()) {
-//	fields.forEach((key, value) -> {
-//	Field field = ReflectionUtils.findField(Book.class, (String) key);
-//	field.setAccessible(true);
-//	ReflectionUtils.setField(field, book.get(), value);
-//	});
-//	Book updated Book = bookService.saveOrUpdate(book.get());
-//	updatedBook.add(linkTo(methodOn(Book Resource Impl.class).findById(updatedBook.getId())).withSelfRel());
-//	updatedBook.add(linkTo(methodOn(Book Resource Impl.class).findAll()).withSelfRel());
-//	return new ResponseEntity<>(updated Book, HttpStatus.OK);
-//	}
-//	return null;
-//	}
-
 	@Override
 	public Student updateStudent(StudentUpdateDto studentUpdateDto) {
 		Student entity = mapper.map(studentUpdateDto, Student.class);

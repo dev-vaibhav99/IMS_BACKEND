@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.career.constants.AppConstants;
 import com.career.dto.ResponseDto;
 import com.career.exceptions.EmailAlreadyExistsException;
+import com.career.student.dto.LoginDto;
 import com.career.student.dto.StudentPasswordUpdateDto;
 import com.career.student.dto.StudentRegistrationDto;
 import com.career.student.dto.StudentUpdateDto;
@@ -43,6 +44,11 @@ public class StudentController {
 		return new ResponseEntity<>(
 				new ResponseDto(AppConstants.SAVE_SUCCESS, HttpStatus.CREATED.value(), LocalDateTime.now().toString()),
 				HttpStatus.CREATED);
+	}
+	
+	@PostMapping("login")
+	public ResponseEntity<ResponseDto> studentLogin(@RequestBody LoginDto loginDto){
+		return new ResponseEntity<ResponseDto>(new ResponseDto(), HttpStatus.OK); // service->if doesn't exist-> throw StudentDoesNotExistException();
 	}
 
 	@PatchMapping("updatePassword")

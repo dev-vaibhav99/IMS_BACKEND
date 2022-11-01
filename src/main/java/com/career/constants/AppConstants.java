@@ -12,6 +12,8 @@ public class AppConstants {
 	
 	public static String PASSWORD_UPDATE_FAILURE = "PASSWORD COULD NOT BE SAVED";
 	
+	public static String INCORRECT_PASSWORD = "INCORRECT PASSWORD";
+	
 	public static String STUDENT_UPDATE_SUCCESS = "STUDENT UPDATED SUCCESSFULLY";
 	
 	public static String STUDENT_UPDATE_FAILURE = "STUDENT COULD NOT BE UPDATED";

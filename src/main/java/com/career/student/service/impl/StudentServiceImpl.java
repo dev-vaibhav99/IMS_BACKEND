@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.career.constants.AppConstants;
 import com.career.exceptions.EmailAlreadyExistsException;
+import com.career.exceptions.IncorrectPasswordException;
 import com.career.exceptions.StudentNotFoundException;
 import com.career.student.dto.LoginDto;
 import com.career.student.dto.StudentPasswordUpdateDto;
